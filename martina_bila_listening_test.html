@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Martina Bila — Listening Test</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:20px;font-family:Arial,sans-serif;background:#f7f5f2;color:#292929}
+.container{max-width:800px;margin:auto;background:#fff;padding:30px;border-radius:18px;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+h1{text-align:center;font-size:27px;margin:0 0 8px}
+.sub{text-align:center;color:#777;margin-bottom:30px}
+.part{font-size:21px;font-weight:bold;margin:30px 0 8px}
+.instructions{color:#555;line-height:1.5;margin-bottom:20px}
+.question{background:#fafafa;border:1px solid #eee;border-radius:13px;padding:18px;margin-bottom:20px}
+.qtext{font-weight:bold;line-height:1.5;margin-bottom:14px}
+input[type=text]{width:100%;padding:12px 14px;border:1px solid #d5d5d5;border-radius:9px;font-size:16px;background:#fff;outline:none}
+input.correct{background:#dff3e4;border-color:#55a86a}
+input.wrong{background:#f9dddd;border-color:#d66a6a}
+.correct-answer{display:none;margin-top:8px;padding:8px 10px;background:#e8f5eb;color:#347544;border-radius:7px;font-size:14px}
+.option{display:block;background:#fff;border:1px solid #ddd;border-radius:9px;padding:11px 13px;margin:8px 0;cursor:pointer}
+.option.correct{background:#dff3e4;border-color:#55a86a}
+.option.wrong{background:#f9dddd;border-color:#d66a6a}
+button{width:100%;padding:15px;border:0;border-radius:10px;background:#292929;color:#fff;font-size:17px;cursor:pointer;margin-top:10px}
+.restart{background:#777;margin-top:12px}
+.result{display:none;margin-top:25px;padding:22px;border-radius:13px;background:#f2f0ff;text-align:center}
+.score{font-size:32px;font-weight:bold;margin:8px 0}
+.message{font-size:17px;margin-bottom:15px}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Martina Bila — Listening Test</h1>
+<div class="sub">Questions 1–10</div>
+
+<div class="part">Part 1 — Questions 1–4</div>
+<div class="instructions">Complete the following sentences using NO MORE THAN THREE WORDS AND/OR NUMBERS for each.</div>
+
+<div class="question"><div class="qtext">1. Martina Bila’s appointment with the accommodation officer is at ______.</div>
+<input id="a1" type="text" placeholder="Type your answer"><div id="c1" class="correct-answer">Correct answer: 10 o'clock</div></div>
+
+<div class="question"><div class="qtext">2. Martina’s current accommodation is ______ from the university than she expected.</div>
+<input id="a2" type="text" placeholder="Type your answer"><div id="c2" class="correct-answer">Correct answer: farther / further</div></div>
+
+<div class="question"><div class="qtext">3. The landlady is a ______.</div>
+<input id="a3" type="text" placeholder="Type your answer"><div id="c3" class="correct-answer">Correct answer: heavy smoker</div></div>
+
+<div class="question"><div class="qtext">4. The ______ to the university isn’t good.</div>
+<input id="a4" type="text" placeholder="Type your answer"><div id="c4" class="correct-answer">Correct answer: bus connection</div></div>
+
+<div class="part">Questions 5–7</div>
+<div class="instructions">Choose the correct answer, A, B, C or D.</div>
+
+<div class="question" data-q="5" data-correct="D"><div class="qtext">5. Martina is looking for</div>
+<label class="option"><input type="radio" name="q5" value="A"> A. catered accommodation.</label>
+<label class="option"><input type="radio" name="q5" value="B"> B. self-catering accommodation.</label>
+<label class="option"><input type="radio" name="q5" value="C"> C. a place with a landlady.</label>
+<label class="option"><input type="radio" name="q5" value="D"> D. catered or self-catered university accommodation.</label></div>
+
+<div class="question" data-q="6" data-correct="C"><div class="qtext">6. The accommodation officer received details of some accommodation</div>
+<label class="option"><input type="radio" name="q6" value="A"> A. the day before Martina made the appointment.</label>
+<label class="option"><input type="radio" name="q6" value="B"> B. the day Martina made the appointment.</label>
+<label class="option"><input type="radio" name="q6" value="C"> C. the day after Martina made the appointment.</label>
+<label class="option"><input type="radio" name="q6" value="D"> D. the day before he met Martina.</label></div>
+
+<div class="question" data-q="7" data-correct="D"><div class="qtext">7. When does the accommodation officer think other accommodation will be available?</div>
+<label class="option"><input type="radio" name="q7" value="A"> A. In the next few days.</label>
+<label class="option"><input type="radio" name="q7" value="B"> B. In the next few weeks.</label>
+<label class="option"><input type="radio" name="q7" value="C"> C. Not for a long while.</label>
+<label class="option"><input type="radio" name="q7" value="D"> D. He doesn’t know.</label></div>
+
+<div class="part">Questions 8–10</div>
+<div class="instructions">Answer the following questions using NO MORE THAN THREE WORDS AND/OR NUMBERS for each.</div>
+
+<div class="question"><div class="qtext">8. How much do students pay for catered accommodation during term time?</div>
+<input id="a8" type="text" placeholder="Type your answer"><div id="c8" class="correct-answer">Correct answer: 37.5</div></div>
+
+<div class="question"><div class="qtext">9. What nationality are Martina’s new flatmates?</div>
+<input id="a9" type="text" placeholder="Type your answer"><div id="c9" class="correct-answer">Correct answer: British and Indian</div></div>
+
+<div class="question"><div class="qtext">10. What will Martina lose?</div>
+<input id="a10" type="text" placeholder="Type your answer"><div id="c10" class="correct-answer">Correct answer: her deposit / deposit</div></div>
+
+<button id="check" onclick="check()">Готово</button>
+<div id="result" class="result"><div>Your result:</div><div id="score" class="score"></div><div id="message" class="message"></div><button class="restart" onclick="restart()">Пройти тест ещё раз</button></div>
+</div>
+
+<script>
+function norm(s){return s.toLowerCase().trim().replace(/[’']/g,"'").replace(/\s+/g," ")}
+var answers={
+1:["ten","10","ten o'clock","10 o'clock","ten oclock","10 oclock"],
+2:["farther","further"],
+3:["heavy smoker"],
+4:["bus connection"],
+8:["37.5","37.50","£37.5","£37.50"],
+9:["british and indian","british & indian","british, indian"],
+10:["her deposit","deposit"]
+};
+function textQ(n){
+var el=document.getElementById("a"+n),v=norm(el.value),ok=answers[n].some(x=>norm(x)===v);
+el.classList.remove("correct","wrong");
+document.getElementById("c"+n).style.display="none";
+if(ok)el.classList.add("correct");else{el.classList.add("wrong");document.getElementById("c"+n).style.display="block"}
+return ok
+}
+function check(){
+var score=0;
+[1,2,3,4,8,9,10].forEach(n=>{if(textQ(n))score++});
+[5,6,7].forEach(n=>{
+var q=document.querySelector('[data-q="'+n+'"]'),correct=q.dataset.correct,sel=q.querySelector('input[name="q'+n+'"]:checked');
+q.querySelectorAll(".option").forEach(x=>x.classList.remove("correct","wrong"));
+if(sel&&sel.value===correct){score++;sel.parentElement.classList.add("correct")}
+else{
+if(sel)sel.parentElement.classList.add("wrong");
+var cor=q.querySelector('input[value="'+correct+'"]');
+if(cor)cor.parentElement.classList.add("correct")
+}});
+var p=Math.round(score/10*100);
+document.getElementById("score").textContent=score+" / 10 ("+p+"%)";
+document.getElementById("message").textContent=p===100?"Excellent! Perfect score!":p>=80?"Great job! You did very well.":p>=60?"Good job! Keep practising.":p>=40?"Not bad, but there is room for improvement.":"Keep practising — you’ll get there!";
+document.getElementById("result").style.display="block";
+document.getElementById("check").style.display="none";
+document.getElementById("result").scrollIntoView({behavior:"smooth"})
+}
+function restart(){
+document.querySelectorAll("input[type=text]").forEach(x=>{x.value="";x.classList.remove("correct","wrong")});
+document.querySelectorAll(".correct-answer").forEach(x=>x.style.display="none");
+document.querySelectorAll("input[type=radio]").forEach(x=>x.checked=false);
+document.querySelectorAll(".option").forEach(x=>x.classList.remove("correct","wrong"));
+document.getElementById("result").style.display="none";
+document.getElementById("check").style.display="block";
+window.scrollTo({top:0,behavior:"smooth"})
+}
+</script>
+</body>
+</html>
